@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập - Kho hàng vô tri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="split-container">
+    <!-- Banner bên trái -->
+    <div class="split-left">
+      <div class="banner-content">
+        <i class="fas fa-warehouse banner-icon"></i>
+        <h1>Kho Hàng Vô Tri</h1>
+        <p>Giải pháp quản lý kho thông minh<br>cho doanh nghiệp hiện đại</p>
+      </div>
+    </div>
+
+    <!-- Form đăng nhập bên phải -->
+    <div class="split-right">
+      <div class="login-form">
+        <div class="form-header">
+          <h2>Đăng nhập</h2>
+          <p>Vui lòng đăng nhập để tiếp tục</p>
+        </div>
+
+        <!-- Form đăng nhập thường -->
+        <form id="loginForm">
+          <div class="form-group">
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="username" placeholder="Tên đăng nhập">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="Mật khẩu">
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label>
+              <input type="checkbox" id="rememberMe">
+              <span>Ghi nhớ đăng nhập</span>
+            </label>
+            <a href="#" class="forgot-link">Quên mật khẩu?</a>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            Đăng nhập <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- Đăng nhập với Google -->
+        <div class="divider">hoặc</div>
+
+        <button type="button" id="googleLoginBtn" class="google-btn">
+          <img src="https://www.google.com/favicon.ico" alt="Google">
+          <span>Đăng nhập với Google</span>
+        </button>
+
+        <div class="register-link">
+          <p>Chưa có tài khoản? <a href="signup.html">Đăng ký ngay</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js" type="module"></script>
+</body>
+</html>
