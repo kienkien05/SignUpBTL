@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Đăng nhập - Kho hàng vô tri</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
   <div class="split-container">
@@ -47,13 +47,28 @@
               <input type="checkbox" id="rememberMe">
               <span>Ghi nhớ đăng nhập</span>
             </label>
-            <a href="#" class="forgot-link">Quên mật khẩu?</a>
+            <!-- Thêm liên kết quên mật khẩu -->
+            <div class="forgot-password">
+              <a href="#" id="forgotPasswordLink">Quên mật khẩu?</a>
+            </div>
           </div>
 
           <button type="submit" class="btn-submit">
             Đăng nhập <i class="fas fa-arrow-right"></i>
           </button>
         </form>
+
+        <!-- Form khôi phục mật khẩu -->
+        <div id="forgotPasswordForm" style="display: none; text-align: center; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background: #f9f9f9; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+          <h3 style="margin-bottom: 10px; color: #333;">Khôi phục mật khẩu</h3>
+          <p style="margin-bottom: 15px; color: #666;">Nhập email để nhận hướng dẫn đặt lại mật khẩu</p>
+          <div>
+            <label for="email" style="display: block; text-align: left; font-weight: bold; margin-bottom: 5px;">Địa chỉ email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+          </div>
+          <button type="button" id="submitForgotPassword" style="margin-top: 15px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Gửi yêu cầu</button>
+          <button type="button" id="cancelForgotPassword" style="margin-top: 10px; padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">Hủy</button>
+        </div>
 
         <!-- Đăng nhập với Google -->
         <div class="divider">hoặc</div>
@@ -70,6 +85,6 @@
     </div>
   </div>
 
-  <script src="login.js" type="module"></script>
+  <script src="../js/core/login.js" type="module"></script>
 </body>
 </html>
